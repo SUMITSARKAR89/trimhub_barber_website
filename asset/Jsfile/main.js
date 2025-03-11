@@ -1,3 +1,4 @@
+// ===========================slider image indexHTML============================
 const faqContent = document.querySelectorAll('.faq-content');
 
 faqContent.forEach( faqs => {
@@ -7,7 +8,8 @@ faqContent.forEach( faqs => {
 });
 
 
-// ===========================slider image================================
+
+// ===========================slider image indexHTML============================
 const diffContent = document.querySelectorAll('.diff-content');
 
 diffContent.forEach( faqs => {
@@ -16,12 +18,59 @@ diffContent.forEach( faqs => {
     })
 });
 
+// ===========================menubar responsive================================
+const navigationLink = document.querySelector(".navigation-link");
+const closeMenu = document.querySelector(".close-menu");
+const openMenu = document.querySelector(".open-menu");
+
+openMenu.addEventListener("click", () => {
+    navigationLink.style.top = "0";
+    navigationLink.style.opacity = "1";
+    openMenu.style.display = "none";
+    closeMenu.style.display = "block";
+});
+
+closeMenu.addEventListener("click", () => {
+    navigationLink.style.top = "-800%";
+    navigationLink.style.opacity = "0";
+    openMenu.style.display = "block";
+    closeMenu.style.display = "none";
+
+});
+
+// // ===========================active nav link================================
+// const navListBtn = document.querySelectorAll(".nav-link-res");
+
+// navListBtn.forEach((btn ) => {
+//     btn.addEventListener('click', () => {
+//         navListBtn.forEach( btn => {
+//             btn.classList.remove('active-res');
+//         })
+//         btn.classList.add('active-res');
+//     });
+// });
+
+// ===========================tab menu bar================================
+window.onscroll = function(){
+    scrollbarNavigation();
+};
+function scrollbarNavigation(){
+    const header = document.querySelector("header");
+
+    if(document.body.scrollTop > 40 || document.documentElement.scrollTop >40){
+        header.style.top = "-5px";
+    }else{
+        header.style.top = ""
+    }
+};
 
 
 
 
 
 
+
+// ===========================bg slider iamge carousel================================
 //btn variable
 const nextBtn = document.querySelector("#next");
 const prevBtn = document.querySelector("#prev");
@@ -103,3 +152,24 @@ function changeImage(a){
 }
 
 
+
+// ===========================top scroll bar============================
+const topScroll = document.querySelector('.tab-to-up');
+
+window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 600){
+        topScroll.classList.add("active")
+    }else{
+        topScroll.classList.remove("active")
+    }
+});
+
+
+// ===========================package price serviceHTML================================
+const packagePrice = document.querySelectorAll('.package-price');
+
+packagePrice.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+});
