@@ -1,3 +1,5 @@
+
+
 // ===========================slider image indexHTML============================
 const faqContent = document.querySelectorAll('.faq-content');
 
@@ -6,6 +8,16 @@ faqContent.forEach( faqs => {
         faqs.classList.toggle("active");
     })
 });
+
+// ===========================package price serviceHTML================================
+const packagePrice = document.querySelectorAll('.package-price');
+
+packagePrice.forEach( faqs => {
+    faqs.addEventListener("click", () => {
+        faqs.classList.toggle("active");
+    })
+});
+
 
 
 
@@ -57,14 +69,18 @@ window.onscroll = function(){
 function scrollbarNavigation(){
     const header = document.querySelector("header");
 
-    if(document.body.scrollTop > 40 || document.documentElement.scrollTop >40){
-        header.style.top = "-5px";
+    if(document.body.scrollTop > 50 || document.documentElement.scrollTop >50){
+        header.style.top = "0px";
     }else{
-        header.style.top = ""
+        header.style.top = "-500px"
     }
 };
 
-
+// window.addEventListener("scroll", () => {
+//     let serviceBtn = document.querySelector("servicebtn-group");
+//     serviceBtn.classList.toggle("sticky", window.scrollY > 0)
+//     console.log(serviceBtn)
+// })
 
 
 
@@ -153,6 +169,7 @@ function changeImage(a){
 
 
 
+
 // ===========================top scroll bar============================
 const topScroll = document.querySelector('.tab-to-up');
 
@@ -165,11 +182,4 @@ window.addEventListener('scroll', () => {
 });
 
 
-// ===========================package price serviceHTML================================
-const packagePrice = document.querySelectorAll('.package-price');
 
-packagePrice.forEach( faqs => {
-    faqs.addEventListener("click", () => {
-        faqs.classList.toggle("active");
-    })
-});

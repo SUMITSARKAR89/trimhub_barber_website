@@ -97,6 +97,7 @@
 
     <main>
         <!-- ======services section======= -->
+
         <section id="serviceHTML">
             <div class="our-service">
                 <h2>our services</h2>
@@ -203,7 +204,7 @@
         </section>
 
         <!-- ======services button section======= -->
-        <section id="servicebtn">
+        <section id="servicebtn" >
             <div class="container">
                 <div class="servicebtn-group">
                     <a href="#haircutId" class="service-btn">haircut & hairstyling</a>
@@ -213,6 +214,37 @@
                 </div>
             </div>
 
+        </section>
+
+        <!-- ======services button section======= -->
+
+        <section id="haircutId">
+            
+                <div class="haircut-container">
+                    <div class="haircut_style">
+                        <div class="hair-carousel">
+                            <div class="hair-carousel-images">
+                              <img src="/asset/photo/hairid (1).jpg" alt="Image 1" class="active">
+                              <img src="/asset/photo/hairid (2).jpg" alt="Image 2">
+                              <img src="/asset/photo/hairid (1).png" alt="Image 3">
+                            </div>
+                            <div class="hair-carousel-controls">
+                              <button class="hair-prev-btn">&#9650;</button>
+                              
+                              <button class="hair-next-btn">&#9660;</button>
+                              <div class="hair-dots">
+                                <span class="hair-dot active" data-index="0"></span>
+                                <span class="hair-dot" data-index="1"></span>
+                                <span class="hair-dot" data-index="2"></span>
+                            </div> 
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="haircut-content"></div>
+                </div>
+            
         </section>
     </main>
 
@@ -282,6 +314,46 @@
     </footer>
 
     <script src="asset/Jsfile/main.js"></script>
+    <script>
+        const hairCarouselImages = document.querySelector('.hair-carousel-images');
+const hairImages = document.querySelectorAll('.hair-carousel-images img');
+const hairprevBtn = document.querySelector('.hair-prev-btn');
+const hairnextBtn = document.querySelector('.hair-next-btn');
+const hairdots = document.querySelectorAll('.hair-dot');
+
+let currentIndex = 0;
+
+function showImage(index) {
+  hairImages.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+  hairdots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % hairImages.length;
+  showImage(currentIndex);
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + hairImages.length) % hairImages.length;
+  showImage(currentIndex);
+}
+
+hairdots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(currentIndex);
+  });
+});
+
+hairprevBtn.addEventListener('click', prevImage);
+hairnextBtn.addEventListener('click', nextImage);
+    </script>
+   
+   
     
 </body>
 </html>

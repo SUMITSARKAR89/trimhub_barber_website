@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vertical Image Carousel</title>
+  <style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.carousel {
+  width: 300px;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+}
+
+.carousel-images {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.carousel-images img.active {
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.prev-btn, .next-btn {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.dots {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #333;
+}
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-images">
+      <img src="/asset/photo/bg-sliderimg (1).jpg" alt="Image 1" class="active">
+      <img src="/asset/photo/bg-sliderimg (2).jpg" alt="Image 2">
+      <img src="/asset/photo/bg-sliderimg (1).jpg" alt="Image 3">
+    </div>
+    <div class="carousel-controls">
+      <button class="prev-btn">&#9650;</button>
+      <div class="dots">
+        <span class="dot active" data-index="0"></span>
+        <span class="dot" data-index="1"></span>
+        <span class="dot" data-index="2"></span>
+      </div>
+      <button class="next-btn">&#9660;</button>
+    </div>
+  </div>
+
+  <script >
+    const carouselImages = document.querySelector('.carousel-images');
+const images = document.querySelectorAll('.carousel-images img');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dot');
+
+let currentIndex = 0;
+
+function showImage(index) {
+  images.forEach((img, i) => {
+    img.classList.toggle('active', i === index);
+  });
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === index);
+  });
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % images.length;
+  showImage(currentIndex);
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + images.length) % images.length;
+  showImage(currentIndex);
+}
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    currentIndex = index;
+    showImage(currentIndex);
+  });
+});
+
+prevBtn.addEventListener('click', prevImage);
+nextBtn.addEventListener('click', nextImage);
+
+// Auto-play (optional)
+setInterval(nextImage, 3000);
+  </script>
+</body>
+</html>
