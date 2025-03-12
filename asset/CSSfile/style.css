@@ -3019,3 +3019,17 @@ footer span em{
    height: 100%;
    object-fit: cover;
   }
+
+  /* ---------------------------------------------------------------------
+ ====================== blog HTML start here  =======================
+ ------------------------------------------------------------------------*/
+ section#featureBlog,
+ section#latestBlog,
+ section#tipsBlog,
+ section#businessBlog{
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   
+   
+ }
