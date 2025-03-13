@@ -1,145 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vertical Image Carousel</title>
-  <style>
-    body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f0f0f0;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Barber. is an elegant and modern Framer template designed for gents’ barber shops, hairdressing salons, or grooming studio businesses. It is crafted to showcase services, prices, galleries, contact information, offers, blog etc.">
+    <meta name="title" content="Barber-- mans saloon">
+    <meta property="og:type" content="website, barber shop">
+    <meta name="keywords" content="Barber - Men's Hair Salon & Hairdresser Website Template">
+    <meta name="author" content="sumit sarkar">
 
-.carousel {
-  width: 300px;
-  overflow: hidden;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  position: relative;
-}
+    <!-- font awesome cdn   --------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-.carousel-images {
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.5s ease-in-out;
-}
+    <!-- favicon section   --------------------------------->
+    <link rel="shortcut icon" href="asset/photo/barber.png" type="image/x-icon">
 
-.carousel-images img {
-  width: 100%;
-  height: auto;
-  display: none;
-}
+    <!-- this is Css section   --------------------------------->
+     <link rel="stylesheet" href="asset/CSSfile/style.css">
+     <link rel="stylesheet" href="asset/CSSfile/responsive.css">
+   
 
-.carousel-images img.active {
-  display: block;
-}
+    <!-- this is google font section   --------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Staatliches&display=swap" rel="stylesheet">
+    
 
-.carousel-controls {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+    <!-- remix icon link   --------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/7.4.0/esm/ionicons.min.js" integrity="sha512-heZj7rPbZHWyOEhE34vsJkzj2DKK2mZ9D3jjMkXQJ0uMGu/m5iOty+le26NL1eFZ5+qa4XBYcflwYwITwCWufw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-.prev-btn, .next-btn {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
-  font-size: 16px;
-}
+    <!-- ---swiper js ---------------------------------->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-.prev-btn:hover, .next-btn:hover {
-  background: rgba(0, 0, 0, 0.8);
-}
+    <!-- ---scroll reveal js ---------------------------------->
+    <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
 
-.dots {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  background: #bbb;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: #333;
-}
-  </style>
+    <title> Barber - Men's Hair Salon & Hairdresser Website Template</title>
+    
 </head>
 <body>
-  <div class="carousel">
-    <div class="carousel-images">
-      <img src="/asset/photo/bg-sliderimg (1).jpg" alt="Image 1" class="active">
-      <img src="/asset/photo/bg-sliderimg (2).jpg" alt="Image 2">
-      <img src="/asset/photo/bg-sliderimg (1).jpg" alt="Image 3">
+    <!-- ========================================================
+    ------------------header start here---------------------
+    ======================================================== -->
+    <header>
+        <head id="head">
+            <div class="logo">
+                <img src="asset/photo/barber.png" alt="" width="35px">
+                <p class="logo-txt">TrimHub</p>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link">home</a>
+                <a href="service.html" class="nav-link ">services</a>
+                <a href="gallery.html" class="nav-link ">gallery</a>
+                <a href="blog.html" class="nav-link">blog</a>
+                <a href="about.html" class="nav-link active">about us</a>
+                <a href="contact.html" class="nav-link">contact us</a>
+            </nav>
+            <a class=" btn phone-link-btn" href="//wa.me/8801914738110?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+                <i class="fa-solid fa-phone-volume up-phone"></i>
+                <span>+15551234567</span>
+            </a>
+        </head>
+        
+    </header>
+
+    <div class="navigation-bar">
+        <div class="logo">
+            <img src="asset/photo/barber.png" alt="" width="35px">
+            <p class="logo-txt">TrimHub</p>
+        </div>
+
+        <div class="navigation-link">
+            <a href="index.html" class="nav-link-res active-res">home</a>
+            <a href="service.html" class="nav-link-res">services</a>
+            <a href="gallery.html" class="nav-link-res">gallery</a>
+            <a href="blog.html" class="nav-link-res">blog</a>
+            <a href="about.html" class="nav-link-res">about us</a>
+            <a href="contact.html" class="nav-link-res">contact us</a>
+            <a class=" btn phone-link-btn" href="//wa.me/8801914738110?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">
+                <i class="fa-solid fa-phone-volume"></i>
+                <span>+15551234567</span>
+            </a>
+        </div>
+
+        <div id="menu">
+            <i class="ri-menu-2-fill open-menu"></i>
+            <i class="ri-close-line close-menu" ></i>
+        </div>
+
     </div>
-    <div class="carousel-controls">
-      <button class="prev-btn">&#9650;</button>
-      <div class="dots">
-        <span class="dot active" data-index="0"></span>
-        <span class="dot" data-index="1"></span>
-        <span class="dot" data-index="2"></span>
+
+
+    <!-- ========================================================
+    ------------------main start here---------------------
+    ======================================================== -->
+
+    <main>
+        <!-- ======about section======= -->
+
+        <section id="serviceHTML">
+            <div class="our-service">
+                <h2>about us</h2>
+            </div>
+        </section>
+
+         <!-- ======service animation======= -->
+        <section id="serviceanim">
+          <div id="bannar">
+      
+              <p><span>haircut <i class="ri-gemini-fill"></i></span>
+                  <span>hairstyle <i class="ri-gemini-fill"></i></span>
+                  <span>beard styling <i class="ri-gemini-fill"></i></span>
+                  <span>gromming <i class="ri-gemini-fill"></i></span>
+                  <span>facial <i class="ri-gemini-fill"></i></span>
+                  <span>haircolor <i class="ri-gemini-fill"></i></span>
+                  <span>skincare <i class="ri-gemini-fill"></i></span>
+                  <span>shave <i class="ri-gemini-fill"></i></span>
+                  <span>skin consultation <i class="ri-gemini-fill"></i></span>
+                  
+                  
+              </p>
+          </div>
+
+       </section>
+
+       <!-- ======aboutHtml section======= -->
+
+       <section id="aboutHtml">
+        <div class="aboutus-head">
+          <p class="about-head-text">Welcome to TrimHub, where grooming is an art, precision is our creed, and your style is our canvas. We're not just a barber shop; we're your trusted grooming partner on a journey of self-expression and confidence.</p>
+
+        <div class="aboutus-container">
+          <div class="aboutus-card">
+            <h3>Our Legacy of Excellence:</h3>
+            <p>With years of experience in the industry, TrimHub stands as a beacon of grooming excellence. Our barbers are more than just professionals; they are artisans, meticulously crafting each haircut and beard trim to perfection. We take pride in our legacy of precision and the trust our clients place in us.</p>
+          </div>
+          <div class="aboutus-card">
+            <h3>A Space of Distinction:</h3>
+            <p>TrimHub is more than a grooming destination; it's an environment designed for your comfort and relaxation. Our modern and welcoming space is an oasis amidst the rush of everyday life. Here, you can unwind, unplug, and immerse yourself in the art of grooming.</p>
+          </div>
+          <div class="aboutus-img">
+            <img src="asset/photo/aboutus-bg.jpg" alt="">
+          </div>
+        </div>
+
+        <p class="about-head-text">We invite you to experience TrimHub – a place where tradition meets innovation, where precision meets artistry, and where grooming becomes an extraordinary experience. Whether you're seeking a classic cut, a rejuvenating shave, or a stylish transformation, our doors are open to welcome you into the world of timeless grooming and experience:</p>
+
+        <div class="aboutus-list">
+          <li>
+            <i class="ri-sparkling-line"></i>
+            <p>Personalized Styling</p>
+          </li>
+          <li>
+            <i class="ri-sparkling-line"></i>
+            <p>Client-Centric Approach</p>
+          </li>
+          <li>
+            <i class="ri-sparkling-line"></i>
+            <p>Luxurious Shaves</p>
+          </li>
+        </div>
+
+        </div>
+       </section>
+
+       <div class="video">
+        <video src="asset/videofile/video1.mp4" class="ten-slider" autoplay loop muted ></video>
       </div>
-      <button class="next-btn">&#9660;</button>
-    </div>
-  </div>
+       
 
-  <script >
-    const carouselImages = document.querySelector('.carousel-images');
-const images = document.querySelectorAll('.carousel-images img');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const dots = document.querySelectorAll('.dot');
+    
+       <!-- ======jacksonMrtn section======= -->
+      <section id="jacksonMrtn">
+        <div class="container">
+          <img src="asset/photo/aboutusbg2.jpg" alt="">
 
-let currentIndex = 0;
+          <div class="jacksonMrtn-container">
+            <p class="jack-text-head">Your journey with us is personal. We understand that every client is unique, and that's why our services are tailored to suit your preferences and lifestyle. Whether you're looking for a classic haircut, a rejuvenating facial treatment, or the perfect beard trim, we've got you covered.</p>
 
-function showImage(index) {
-  images.forEach((img, i) => {
-    img.classList.toggle('active', i === index);
-  });
-  dots.forEach((dot, i) => {
-    dot.classList.toggle('active', i === index);
-  });
-}
+          <div class="jackson-info-container">
+            <div class="jackson-card"></div>
+            <div class="jacksonMrtn-info">
+              <p>Beyond the grooming chair, we believe in building connections. TrimHub is a place where conversations flow as smoothly as the clippers. It's a hub where stories are shared, experiences are cherished, and camaraderie is formed. Our clients are more than just customers; they're part of our community. Our stats say the words:</p>
+              <div class="jacksonMrtn-founder">
+                <h4>-Jackson Martinez</h4>
+                <span>-FOUNDER, DRAPPERCRAFT BARBERS</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
 
-function nextImage() {
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-}
 
-function prevImage() {
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-}
+       <!-- ======about boeard section======= -->
+      <section id="about-board">
+        <div class="board-container aboutBoard-container">
+          <div class="board-card">
+              <span class="number-txt">10+</span>
+              <p>Years of Experience</p>
+          </div>
+          <div class="board-card">
+              <span class="number-txt">4.9</span>
+              <p>Average Reviews</p>
+          </div>
+          <div class="board-card">
+              <span class="number-txt">7</span>
+              <p>Prestigious Awards</p>
+          </div>
+          <div class="board-card">
+              <span class="number-txt">3K+</span>
+              <p>Satisfied Gentlemen</p>
+          </div>
+          
+      </div>
+      </section>
 
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    currentIndex = index;
-    showImage(currentIndex);
-  });
-});
+      
+         <!-- ======contact section======= -->
+        <section id="contact">
+            <div class="container">
+                <div class="specialities-content contact-content">
+                    <div class="specialities-card">
+                        <span id="title">Get in touch</span>
+                        <h2 style="color: #141414;">Contact us</h2>
+                    </div>
+                    <div class="specialities-card">
+                        <p style="color: #141414;">
+                            Feel free to reach out to us with your inquiries through either phone or email. We are here to provide you with the information you need. </p>
+                    </div>
+                </div>
+            </div>
+            <div id="contact-body">
+                <div class="contact-container">
+                    <div class="contact-form">
+                        <form action="">
+                            <h4>Send us a message</h4>
+                            <div class="input-group">
+                                <label for="name">name</label>
+                                <input type="name" name="name" id="name" placeholder="Jane Smith" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="number">phone</label>
+                                <input type="number" name="number" id="number" placeholder="0123 000 000" >
+                            </div>
+                            <div class="input-group">
+                                <label for="email">email</label>
+                                <input type="email" name="email" id="email" placeholder="jane@framer.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="message">message</label>
+                                <textarea name="message" id="message" placeholder="Write your message" rows="8"></textarea>
+                            </div>
+                            <button type="submit" class="form-submit">submit</button>
+                        </form>
+                    </div>
+                    <div class="contact-contects">
+                        <h4>contact information</h4>
+                        <li>
+                            <i class="ri-map-pin-line"></i>
+                            <p>Address: 123 Main Street, Cityville, Stateburg, 98765</p>
+                        </li>
+                        <li>
+                            <i class="ri-phone-line"></i>
+                            <p>Hotline: <a href="//wa.me/8801914738110?text=I'm%20interested%20in%20your%20car%20for%20sale" target="_blank">(555) 123-4567</a> </p>
+                        </li>
+                        <li>
+                            <i class="ri-mail-line"></i>
+                            <p>Email: <a href="mailto: info@barbershop.com">info@barbershop.com</a></p>
+                        </li>
+                        <li>
+                            <i class="ri-time-line"></i>
+                            <div class="time-txt">
+                                <p>Opening Hours: <br>
+                                    Mon to Fri: 9.00am - 8.30pm <br> 
+                                    Sat: 10.00am - 6.30pm <br>
+                                    Sun: Closed</p>
+                            </div>
+                        </li>
+                        <h4>follow us on</h4>
+                        <div class="contact-social-link">
+                            <a href=""><i class="ri-facebook-circle-fill"></i></a>
+                            <a href=""><i class="ri-youtube-fill"></i></a>
+                            <a href=""><i class="ri-instagram-fill"></i></a>
+                            <a href=""><i class="ri-tiktok-fill"></i></a>
+                            <a href=""><i class="ri-twitter-x-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
 
-prevBtn.addEventListener('click', prevImage);
-nextBtn.addEventListener('click', nextImage);
+        </section>
+        <div class="contact-bg"></div>
+    </main>
 
-// Auto-play (optional)
-setInterval(nextImage, 3000);
-  </script>
+    
+    <!-- ========================================================
+    ------------------footer start here---------------------
+    ======================================================== -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-intro">
+                <a href="#hero">
+                    <img src="asset/photo/barber.png" alt="" width="60px">
+                    <p class="foot-txt">TrimHub</p>
+                </a>
+                <p>Elevating Grooming. Inspiring Style. Unleash Your Confidence at TrimHub where we craft exceptional looks that reflect your individuality a passion for style and an eye for detail.</p>
+
+            </div>
+            <div class="footer-links">
+                <div class="footer-card">
+                    <h5>Quick Links</h5>
+                    <li>
+                        <a href="index.html">home</a>
+                        <a href="service.html">services</a>
+                        <a href="gallery.html">gallery</a>
+                        <a href="blog.html">blog</a>
+                        <a href="about.html">about us</a>
+                        <a href="contact.html">contact us</a>
+                    </li>
+                </div>
+                <div class="footer-card">
+                    <h5>Services</h5>
+                    <li>    
+                        <a href="service.html">haircut & hairstyling</a>  
+                        <a href="service.html">beard styling</a>  
+                        <a href="service.html">grooming & skincare</a>  
+                        <a href="service.html">color & treatment</a>  
+                    </li>
+                </div>
+                <div class="footer-card">
+                    <h5>legal</h5>
+                    <li>    
+                        <a href="privacy.html">privacy policy</a> 
+                        <a href="termcondition.html">terms & conditions</a> 
+                    </li>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <h4>follow us on</h4>
+            <div class="footer-social-link">
+                <a href=""><i class="ri-facebook-circle-fill"></i></a>
+                <a href=""><i class="ri-youtube-fill"></i></a>
+                <a href=""><i class="ri-instagram-fill"></i></a>
+                <a href=""><i class="ri-tiktok-fill"></i></a>
+                <a href=""><i class="ri-twitter-x-line"></i></a>
+            </div>
+        </div>
+        <span>all right & reserve <em>trimhub </em>2025</span>
+
+    </footer>
+
+    <script src="asset/Jsfile/main.js"></script>
+
+  
+   
+    
+   
+    
 </body>
 </html>

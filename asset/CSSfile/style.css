@@ -3033,3 +3033,297 @@ footer span em{
    
    
  }
+ /* <!-- ========================================================
+ ------------------about us HTML start here---------------------
+ ======================================================== --> */
+
+ section#aboutHtml{
+   max-width: 100%;
+   margin-top: 10%;
+   margin-bottom: 5%;
+ }
+ #aboutHtml .aboutus-head{
+
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 50px;
+ }
+ .aboutus-head .about-head-text,
+ .jacksonMrtn-container .jack-text-head{
+   font-size: var(--h3-font);
+   color: var(--text-blk-a4);
+   max-width: 100%;
+   width: 98%;
+   line-height: 45px;
+   text-align: left;
+   opacity: 0.8;
+   font-weight: 300;
+ }
+ .aboutus-head .aboutus-container{
+   max-width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+
+ }
+
+ .aboutus-container .aboutus-card{
+   max-width: 100%;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+   padding-left: 40px;
+ }
+ .aboutus-container .aboutus-card::after{
+   position: absolute;
+   content: '';
+   width: 3px;
+   height: 100%;
+   top: 0;
+   left: 0;
+   background: var(--gradient-2);
+ }
+ .aboutus-card h3{
+   font-size: var(--h2-font);
+   font-weight: 400;
+   color: var(--text-blk-a4);
+   opacity: 0.9;
+ }
+ .aboutus-card p{
+   font-size: var(--f-medium);
+   max-width: 100%;
+   width: 98%;
+   line-height: 30px;
+   color: var(--text-blk-a4);
+ }
+ 
+ .aboutus-container .aboutus-img{
+   max-width: 100%;
+   position: relative;
+   width: 100%;
+   height: auto;
+ }
+ .aboutus-img img{
+   height: 600px;
+   width: 100%;
+   object-fit: cover;
+ }
+ .aboutus-head .aboutus-list{
+   max-width: 100%;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+   justify-content: flex-start;
+   align-items: flex-start;
+ }
+ .aboutus-list li{
+   width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   gap: 20px;
+ }
+ .aboutus-list li i{
+   padding: 5px;
+   border-radius: 50%;
+   font-size: var(--h4-font);
+   background: #dad5d5c9;
+   color: var(--text-yl-a3);
+ }
+ .aboutus-list li p{
+   font-size: var(--f-medium);
+   font-weight: 500;
+   opacity: 0.8;
+
+ }
+
+
+ section#jacksonMrtn{
+   max-width: 100%;
+   background: var(--bg-black-c1);
+   margin: 0;
+   padding-top: 10%;
+   padding-bottom: 10%;
+   height: auto;
+ }
+ #jacksonMrtn img{
+   max-width: 100%;
+   margin: 0 auto;
+   width: 100%;
+   height: 600px;
+   filter: grayscale(100%);
+   object-fit: cover;
+ }
+ .jacksonMrtn-container .jack-text-head{
+   color: var(--text-wht-a1);
+   margin-top: 5%;
+ }
+ 
+ .jackson-info-container {
+   
+   margin-top: 3%;
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   max-width: 100%;
+   width: 100%;
+   
+ }
+ .jackson-info-container .jackson-card{
+   width: 30%;
+ }
+ .jackson-info-container .jacksonMrtn-info{
+   width: 70%;
+   padding: 10px;
+ }
+ .jacksonMrtn-info p{
+   color: var(--text-wht-a1);
+   font-size: var(--f-semi-medium);
+   line-height: 25px;
+   margin-bottom: 30px;
+   
+ }
+ .jacksonMrtn-info .jacksonMrtn-founder{
+   
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+ }
+ .jacksonMrtn-founder h4{
+   font-family: "Inspiration", cursive; 
+   color: var(--text-wht-a1);
+   font-size: var(--h2-font);
+   opacity: 0.8;
+
+ }
+ .jacksonMrtn-founder  span{
+   color: var(--text-yl-a3);
+ }
+
+
+
+ section#about-board{
+   background: var(--bg-black-c1); 
+   max-width: 100%;
+   margin: 0;
+   padding: 30px 30px 60px;
+   height: auto;
+ }
+ #about-board .aboutBoard-container{
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 10px;
+   
+ }
+ .aboutBoard-container .board-card{
+   border-radius: 10px;
+ }
+
+ /* <!-- ========================================================
+ ------------------contact us HTML start here---------------------
+ ======================================================== --> */
+ #hero-contact .contact-follow{
+ 
+   max-width: 100%;
+   margin: 20px auto;
+   padding-bottom: 10%;
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
+ }
+ .contact-follow h4{
+   font-size: var(--h3-font);
+   color: var(--text-yl-a3);
+   font-weight: 400;
+   margin-bottom: 25px;
+ }
+ .contact-follow .contact-follow-link{
+   max-width: 100%;
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 20px;
+   
+ }
+
+ .contact-follow-link a i{
+   font-size: var(--h3-font);
+   color: var(--text-wht-a2);
+   background-color: #ffffff31;
+   padding: 5px;
+   border-radius: 50%;
+   transform: scale(1);
+   transition: var(--transition-1)
+ }
+ .contact-follow-link a i:hover{
+   transform: scale(0.9);
+   color: var(--text-yl-a3);
+   background-color: #ffffff31;
+ }
+
+ section#map{
+   max-width: 100%;
+ }
+ #map iframe{
+   width: 100%;
+ }
+
+ /* <!-- ========================================================
+ ------------------privacy policy HTML start here---------------------
+ ======================================================== --> */
+ section#privacy-policy{
+   max-width: 100%;
+   background: var(--bg-grey-c2);
+   margin: 0;
+   padding: 10% 10px;
+ }
+ .privacy-policy-body{
+   max-width: 100%;
+   width: 70%;
+   margin: 0 auto;
+ }
+ .privacy-policy-body p{
+   font-size: var(--f-medium);
+   color: var(--text-wht-a1);
+   font-weight: 400;
+   margin-top: 35px;
+   line-height: 25px;
+ }
+ .privacy-policy-body span{
+   color: var(--text-yl-a3);
+   padding-top: 15px;
+   display: block;
+ }
+ .privacy-policy-body .alphabet{
+   padding: 0 15px;
+   max-width: 100%;
+ }
+ .privacy-policy-body .alphabet .alphabet-li{
+   list-style: decimal;
+   color: var(--text-wht-a1);
+   opacity: 0.9;
+ }
+ .alphabet-li p b{
+   padding-right: 5px;
+ }
+ .alphabet-li .pointdot{
+   margin-top: 25px;
+ }
+ .pointdot li{
+   list-style-type: disc;
+   padding: 2px;
+   margin-left: 35px;
+ }
+
+ .alphabet-li p a{
+   color: var(--text-yl-a3);
+ }
+ 
