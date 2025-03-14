@@ -35,6 +35,8 @@
 
     <!-- ---scroll reveal js ---------------------------------->
     <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <title> Barber - Men's Hair Salon & Hairdresser Website Template</title>
 </head>
@@ -1133,6 +1135,19 @@ colortreatnextBtn.addEventListener('click', nextImage4);
 
 
     </script> 
+    <script>
+        ScrollReveal({ 
+            // reset: true,
+            distance: "60px",
+            duration: 2500,
+            delay:400 
+        });
+
+        ScrollReveal().reveal('.pakage-title, .package-price', { delay: 100, origin: 'top'});
+        ScrollReveal().reveal('.service-btn, .price-card ', { delay: 200, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.hair-carousel-images', { delay: 200, origin: 'bottom', interval: 200 });
+        ScrollReveal().reveal('.haircut-content-desc', { delay: 200, origin: 'right' });
+    </script>
    
     
    

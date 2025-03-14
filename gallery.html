@@ -35,6 +35,8 @@
 
     <!-- ---scroll reveal js ---------------------------------->
     <!-- <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
     <title> Barber - Men's Hair Salon & Hairdresser Website Template</title>
     
@@ -122,7 +124,7 @@
                     <div class="img-box"><img src="asset/photo/galleryid (10).jpg" alt=""></div>
                 </div>
                 
-                <div class="galleryCard">
+                <div class="galleryCard ">
                    
                     <div class="img-box"><img src="asset/photo/galleryid (10).jpg" alt=""></div>
                     <div class="img-box"><img src="asset/photo/galleryid (4).jpg" alt=""></div>
@@ -277,6 +279,21 @@
     </footer>
 
     <script src="asset/Jsfile/main.js"></script>
+    <script>
+         ScrollReveal({ 
+            reset: true,
+            distance: "60px",
+            duration: 2500,
+            delay:400 
+        });
+
+        ScrollReveal().reveal('.video', { delay: 100, origin: 'top'});
+        ScrollReveal().reveal('.galleryCard, .footer-social, .specialities-card', { delay: 100, origin: 'bottom'});
+        ScrollReveal().reveal('.footer-intro, .contact-form', { delay: 100, origin: 'left'});
+        ScrollReveal().reveal('.footer-links, .contact-contects', { delay: 100, origin: 'right'});
+    
+        
+    </script>
 
   
    
