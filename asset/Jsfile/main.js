@@ -182,4 +182,28 @@ window.addEventListener('scroll', () => {
 });
 
 
+//==========================scroll reveal=============================
+ScrollReveal({ 
+    // reset: true,
+    distance: "60px",
+    duration: 2500,
+    delay:400 
+});
+
+// ScrollReveal().reveal('.avatar-img', { delay: 100, origin: 'top' });
+// ScrollReveal().reveal('.text-info', { delay: 300, origin: 'bottom' });
+// ScrollReveal().reveal('.social-home', { delay: 600, origin: 'left' });
+// ScrollReveal().reveal('.scroll-bar', { delay: 700, origin: 'bottom' });
+// ScrollReveal().reveal('.about-image, .contact-info', { delay: 800, origin: 'left' });
+// ScrollReveal().reveal('.about-body, .contact-form', { delay: 900, origin: 'right' });
+// ScrollReveal().reveal('.about-card-container', { delay: 400, origin: 'bottom' });
+// ScrollReveal().reveal('.about-content, .contact-card', { delay: 300, origin: 'bottom' });
+// ScrollReveal().reveal('.about-card', { delay: 500, origin: 'right', interval: 200 });
+// ScrollReveal().reveal('.btn-group .hire-btn, .btn-group .head-btn', { delay: 800, origin: 'right', interval: 200 });
+// ScrollReveal().reveal('.portfolio-btns, .footer-links', { delay: 400, origin: 'top', interval: 200 });
+// ScrollReveal().reveal('.resume-btn .tab-btn', { delay: 300, origin: 'right', interval: 200 });
+// ScrollReveal().reveal('.port-with-modal, .contact-social-link', { delay: 300, origin: 'right', interval: 200 });
+
+ScrollReveal().reveal('.resume-content', { delay: 300, origin: 'bottom' });
+ScrollReveal().reveal('.service-text, .testimonial-text, .contact-text, .resume-text', { delay: 300, origin: 'bottom' });
 

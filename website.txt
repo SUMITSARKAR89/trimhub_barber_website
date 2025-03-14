@@ -1,0 +1,51 @@
+website name: trimhub_uk.com
+website link: https://trimhubhaircut.netlify.app
+pages: 12Pages.
+charge and cost = $450 
+
+==>Responsive:
+    1420px
+    1280px
+    1040px
+    860px
+    668px
+
+==>website info
+    --swipeJs reviewSlider
+    --emailJs'
+    --scroll reveal js
+    --assets (JS, Css, Html, mainJs, appJs, image )
+    --responsive-- OK.
+==> Description of Services:
+
+    --Complete Website Development
+    --Design and Layout (Vs code, Figma)
+    --icon and Favicon (3 differernt link)
+    --font customizing (True)
+    --Frontend Development (HTML, CSS, JavaScript)
+    --React N/A
+    --Backend Development (false)
+    --Testing and QA (Bug Fixes, Performance Optimization)
+    --Deployment and Launch (false)
+    --Responsive Website (true)    
+
+==>compiler & content agenda:
+1. Home 
+    #hero #hero-contact #specialize #prices #shopImageAnimation #accordionCard #backgroundSection #countNumber #expertSection #reviewSlider #articleBlogCard #imageBackgroundSlider #contactForm #footerCards
+2. Services
+    #pricePackage(clickable) #buttonGroupCard #textAnimation #cardDisplayImage #imageCarouselWithBtn
+                        => haircut & hairstyling
+                            beard styling
+                            grooming & skincare
+                            color & treatment
+3. Gallery
+    #video #imageGradien
+4. Blog
+    #latestBlog #tipsBlog #featureBlog #businessBlog #productReview #textAnimation
+5. About us
+    #contents #imageContent #founderProfile #textAnimation #closeVideo #numberCount
+6. contact us
+    #contactForm #map #socialLink
+
+7. privacy policy
+8. Term N condition
