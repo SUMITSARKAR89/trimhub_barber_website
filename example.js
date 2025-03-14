@@ -32,8 +32,8 @@ diffContent.forEach( faqs => {
 
 // ===========================menubar responsive================================
 const navigationLink = document.querySelector(".navigation-link");
-const closeMenu = document.querySelector("#menu .close-menu");
-const openMenu = document.querySelector("#menu .open-menu");
+const closeMenu = document.querySelector(".close-menu");
+const openMenu = document.querySelector(".open-menu");
 
 openMenu.addEventListener("click", () => {
     navigationLink.style.top = "0";
@@ -180,6 +180,169 @@ window.addEventListener('scroll', () => {
         topScroll.classList.remove("active")
     }
 });
+
+// ==================haircutIdCarousel===============================
+const hairCarouselImages = document.querySelector('.hair-carousel-images');
+const hairImages = document.querySelectorAll('.hair-carousel-images img');
+const hairprevBtn = document.querySelector('.hair-prev-btn');
+const hairnextBtn = document.querySelector('.hair-next-btn');
+const hairdots = document.querySelectorAll('.hair-dot');
+
+let currentIndex = 0;
+
+function showImage(index) {
+hairImages.forEach((img, i) => {
+img.classList.toggle('active', i === index);
+});
+hairdots.forEach((dot, i) => {
+dot.classList.toggle('active', i === index);
+});
+}
+
+function nextImage() {
+currentIndex = (currentIndex + 1) % hairImages.length;
+showImage(currentIndex);
+}
+
+function prevImage() {
+currentIndex = (currentIndex - 1 + hairImages.length) % hairImages.length;
+showImage(currentIndex);
+}
+
+hairdots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentIndex = index;
+showImage(currentIndex);
+});
+});
+
+hairprevBtn.addEventListener('click', prevImage);
+hairnextBtn.addEventListener('click', nextImage);
+
+
+
+
+
+
+// ==================beardIdCarousel===============================
+
+const beardCarouselImages = document.querySelector('.beard-carousel-images');
+const beardImages = document.querySelectorAll('.beard-carousel-images img');
+const beardprevBtn = document.querySelector('.beard-prev-btn');
+const beardnextBtn = document.querySelector('.beard-next-btn');
+const bearddots = document.querySelectorAll('.beard-dot');
+
+let currentIndex2 = 0;
+
+function showImage2(index) {
+beardImages.forEach((img, i) => {
+img.classList.toggle('active-b', i === index);
+});
+bearddots.forEach((dot, i) => {
+dot.classList.toggle('active-b', i === index);
+});
+}
+
+function nextImage2() {
+currentIndex2 = (currentIndex2 + 1) % beardImages.length;
+showImage2(currentIndex2);
+}
+
+function prevImage2() {
+currentIndex2 = (currentIndex2 - 1 + beardImages.length) % beardImages.length;
+showImage2(currentIndex2);
+}
+
+bearddots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentIndex2 = index;
+showImage2(currentIndex2);
+});
+});
+
+beardprevBtn.addEventListener('click', prevImage2);
+beardnextBtn.addEventListener('click', nextImage2);
+
+
+// ==================grommingCarousel===============================
+
+const grommingCarouselImages = document.querySelector('.gromming-carousel-images');
+const grommingImages = document.querySelectorAll('.gromming-carousel-images img');
+const grommingprevBtn = document.querySelector('.gromming-prev-btn');
+const grommingnextBtn = document.querySelector('.gromming-next-btn');
+const grommingdots = document.querySelectorAll('.gromming-dot');
+
+let currentIndex3 = 0;
+
+function showImage3(index) {
+grommingImages.forEach((img, i) => {
+img.classList.toggle('active-c', i === index);
+});
+grommingdots.forEach((dot, i) => {
+dot.classList.toggle('active-c', i === index);
+});
+}
+
+function nextImage3() {
+currentIndex3 = (currentIndex3 + 1) % grommingImages.length;
+showImage3(currentIndex3);
+}
+
+function prevImage3() {
+currentIndex3 = (currentIndex3 - 1 + grommingImages.length) % grommingImages.length;
+showImage3(currentIndex3);
+}
+
+grommingdots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentIndex3 = index;
+showImage3(currentIndex3);
+});
+});
+
+grommingprevBtn.addEventListener('click', prevImage3);
+grommingnextBtn.addEventListener('click', nextImage3);
+
+
+// ==================haircutIdCarousel===============================
+const colortreatCarouselImages = document.querySelector('.colortreat-carousel-images');
+const colortreatImages = document.querySelectorAll('.colortreat-carousel-images img');
+const colortreatprevBtn = document.querySelector('.colortreat-prev-btn');
+const colortreatnextBtn = document.querySelector('.colortreat-next-btn');
+const colortreatdots = document.querySelectorAll('.colortreat-dot');
+
+let currentIn = 0;
+
+function showImage4(index) {
+colortreatImages.forEach((img, i) => {
+img.classList.toggle('active-d', i === index);
+});
+colortreatdots.forEach((dot, i) => {
+dot.classList.toggle('active-d', i === index);
+});
+}
+
+function nextImage4() {
+currentIn = (currentIn + 1) % colortreatImages.length;
+showImage4(currentIn);
+}
+
+function prevImage4() {
+currentIn = (currentIn - 1 + colortreatImages.length) % colortreatImages.length;
+showImage4(currentIn);
+}
+
+colortreatdots.forEach((dot, index) => {
+dot.addEventListener('click', () => {
+currentIn = index;
+showImage4(currentIn);
+});
+});
+
+colortreatprevBtn.addEventListener('click', prevImage4);
+colortreatnextBtn.addEventListener('click', nextImage4);
+
+
 
 
 

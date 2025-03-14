@@ -64,16 +64,67 @@
      --z-tooltop:1000;
      --z-modal:1990;
      --z-max:9999;
-    }
-@keyframes slideIn {
-        0%{
-            transform: translateY(-100%);
-        }
-        100%{transform: translateY(0);}
-        
-    }
+   }
 
-@media (max-width:980px){
+@media (max-width: 1420px){
+  header{
+   padding: 15px 90px;
+  }
+
+}
+@media (max-width: 1280px){
+   
+   header{
+    padding: 15px 70px;
+   }
+   .applyBtn{
+      max-width: 35%;
+   }
+   .gellery-btn{
+      max-width: 60%;
+   } 
+   .package-price-cards{
+    
+      grid-template-columns: 1fr;
+     
+    }
+    .contact-bg{
+     
+      min-height: 80vh;
+    
+    }
+    #contact-body{
+     
+      bottom: -50%;
+      min-height: 110vh;
+      
+    }
+    
+ 
+ }
+
+@media (max-width:1040px){
+   :root{
+      --h1-font: 4.8rem;/*80*/
+      --h2-font: 2.9rem;/*48*/
+      --h3-font: 1.8rem;/*32*/
+      --h4-font:  1.355rem;/*20*/
+      --h5-font: 1.20rem; /*20*/
+ 
+      --f-x-large: 1.345rem;/*22*/
+      --f-large: 1.20rem;/*20*/
+      --f-medium: 1.105rem;/*18*/
+      --f-semi-medium: 1rem;/*16*/
+      --f-small: 0.875rem;/*14*/
+      --f-x-small: 0.75rem;/*12*/
+ 
+      --extra-font: 2.15rem;
+      --xl-h1:7rem;
+      --xl-h2:4rem;
+      --xl-h3:4.315rem;
+     
+ 
+   }
    header{
     display: none;
     transition: var(--transition-2);
@@ -95,20 +146,21 @@
  }
  #menu{
     display: flex;
-    
     max-width: 100%;
     position: absolute;
     top: 30%;
     right: 5%;
     transform: translateY(-50%);
     animation: slideIn 0.6s ease forwards;
+    cursor: pointer;
+    z-index: 10;
     
  }
  #menu i{
     font-size: var(--h3-font);
     color: var(--text-wht-a1);
     cursor: pointer;
-    z-index: 99999;
+   
     transition: var(--transition-1);
     transform: scale(1);
  }
@@ -119,10 +171,14 @@
  #menu .open-menu{
     display: block;
     transition: var(--transition-2);
+    
+    position: relative;
  }
  #menu .close-menu{
     display: none;
     transition: var(--transition-2);
+    
+    position: relative;
     color: var(--text-yl-a3);
  }
  .navigation-bar .navigation-link{
@@ -164,5 +220,239 @@
  }
  .navigation-link .phone-link-btn{
     margin-top: 10%;
- }
+ } 
+ #hero-contact .hero-contact-container{ 
+   padding: 6% 10%;
+   grid-template-columns:  1fr; 
+}.hero-contact-container .hero-contact-card:nth-child(2){
+   border-top: 1px solid #ffffff28;
+   border-bottom: 1px solid #ffffff28;
+   border-right: none;
+    border-left: none;
 }
+.specialities-img img{
+   filter: none;
+}
+.price-content-container{
+   max-width: 100%;
+  
+   flex-direction: column;
+   gap: 15px;
+   margin-bottom: 0%;
+   
+}
+.specialities-img .special-card{
+   width: 90%;
+}
+.special-btn {
+   max-width: 40%;     
+}
+.applyBtn{
+   max-width: 45%;
+}
+.gellery-btn{
+   max-width: 70%;
+} 
+.story-about-body{
+   padding: 25px 35px ; 
+}
+.story-about-body .story-content{
+   margin-bottom: 2%; 
+}
+.story-about-body .story-container,
+#contact-body .contact-container,
+.haircut-container,
+ .beard-container,
+ .gromming-container,
+ .colortreat-container{
+   flex-direction: column;
+} 
+.expert-container,
+.servicebtn-group,
+#about-board .aboutBoard-container{
+   grid-template-columns: repeat(2, 1fr);
+}
+.article-container{
+   grid-template-columns: 1fr;
+}
+section#contact{
+   min-height: 0;
+   height: 100%;   
+ }
+ #contact-body{
+   min-height: 200vh;
+   position: relative;
+   width: 100%;
+  padding: 10px;
+ }
+ .contact-bg{
+   display: none;
+ }
+ .haircut-container .haircut_style,
+ .beard-container .beard_style,
+ .gromming-container .gromming_style,
+ .colortreat-container .colortreat_style,
+ .haircut-container .haircut-content,
+ .beard-container .haircut-content,
+ .gromming-container .haircut-content,
+ .colortreat-container .haircut-content{
+   width: 100%;
+   height: 100%;
+ }
+ .hair-dots {
+   position: absolute;
+   top: 90%;
+   transform: translateX(-50%);
+   width: 10%;
+ 
+   left: 50%;
+   flex-direction: row;
+   height: 30px;
+
+   
+   
+ }
+ .hair-next-btn,
+ .beard-next-btn,
+ .gromming-next-btn,
+ .colortreat-next-btn{
+  display: none;
+ }
+ .gallery-box .galleryCard img{
+   filter: grayscale(0%);
+ }
+ 
+ 
+}
+@media (max-width: 860px){
+   .container{
+      padding: 1% 3% ;
+
+   }
+   section{
+      margin: 2% 3%;
+  } 
+  section#hero{
+   min-height: 70vh;
+
+  } 
+  #hero .sroll-card{
+   display: none;
+}
+.specialities-content{
+  flex-direction: column;
+  gap: 40px;
+}
+.specialities-content .specialities-card{
+   margin: 0 auto;
+
+}
+.specialities-img-container,
+.expert-container,
+.servicebtn-group,
+#about-board .aboutBoard-container{
+   grid-template-columns: 1fr;
+}
+.special-btn {
+   max-width: 60%;     
+}
+.gellery-btn{
+   width: 40%;
+   float: left;
+} 
+.diff-content .diff-answare{
+   flex-direction: column;
+}
+.diff-answare p{
+   width: 100%;
+}
+.diff-answare .diff-answare-img{
+   width: 100%;
+}
+.expert-container .expert-card{
+   height: 500px;
+
+ }
+ footer .footer-container{
+  flex-direction: column;
+}
+.footer-container .footer-intro,
+.footer-container .footer-links{
+width: 100%;
+
+
+
+}
+}
+
+ @media (max-width: 668px){
+
+   :root{
+      --h1-font: 3.8rem;/*80*/
+      --h2-font: 2.2rem;/*48*/
+      --h3-font: 1.5rem;/*32*/
+      --h4-font:  1.25rem;/*20*/
+      --h5-font: 1.1rem; /*20*/
+ 
+      --f-x-large: 1.32rem;/*22*/
+      --f-large: 1.1rem;/*20*/
+      --f-medium: 1rem;/*18*/
+      --f-semi-medium: 0.95rem;/*16*/
+      --f-small: 0.775rem;/*14*/
+      --f-x-small: 0.75rem;/*12*/
+ 
+      --extra-font: 1.5rem;
+      --xl-h1:5rem;
+      --xl-h2:3rem;
+      --xl-h3:2.8rem;
+     
+ 
+   }
+   #board .board-container{
+      grid-template-columns: 1fr;
+   }
+   .hero-content h1{
+      line-height: 60px;
+  
+   }
+   .applyBtn{
+      max-width: 70%;
+   }
+   .special-btn {
+      max-width: 90%;     
+   }
+   .gellery-btn{
+      width: 70%;
+      
+   } 
+   .different-footer{
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   #galleryHtml-container .gallery-box,
+   .footer-container .footer-links{
+      flex-direction: column;
+      margin: 0 auto;
+   }
+   .gallery-box .galleryCard{
+      width: 99.9%;
+   }
+   .jackson-info-container .jackson-card,
+   .jackson-info-container .jacksonMrtn-info{
+      width: 100%;
+   }
+   .jackson-info-container{
+      flex-direction: column;
+   }
+   footer{
+      padding: 8% 3%;
+   }
+   .bg-info-content h2{
+      line-height: 60px;
+      max-width: 100%;
+   }
+   .bg-slider-img .bg-slider-info{
+      padding: 50px 20px;
+   }
+
+ }
